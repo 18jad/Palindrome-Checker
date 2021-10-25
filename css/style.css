@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;900&display=swap");
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffb7b7 0%, #727272 100%),
+    radial-gradient(60.91% 100% at 50% 0%, #ffd1d1 0%, #260000 100%),
+    linear-gradient(238.72deg, #ffdddd 0%, #720066 100%),
+    linear-gradient(127.43deg, #00ffff 0%, #ff4444 100%),
+    radial-gradient(100.22% 100% at 70.57% 0%, #ff0000 0%, #00ffe0 100%),
+    linear-gradient(127.43deg, #b7d500 0%, #3300ff 100%);
+  background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge,
+    normal;
+  font-family: poppins;
+}
+
+.checker-true {
+  background: rgb(128, 255, 206);
+  background: linear-gradient(
+    0deg,
+    rgba(128, 255, 206, 1) 0%,
+    rgba(0, 255, 157, 1) 70%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms linear;
+  opacity: 0;
+  z-index: -99;
+}
+
+.checker-false {
+  background: rgb(255, 121, 107);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 121, 107, 1) 0%,
+    rgba(255, 76, 67, 1) 70%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms linear;
+  opacity: 0;
+  z-index: -99;
+}
+
+.opac {
+  opacity: 1;
+}
+
+.palindrome-checker {
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #333;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  margin-top: -10px;
+}
+
+.test-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.enter {
+  margin: 0px;
+}
+
+.input-area button {
+  background-color: transparent;
+  border: 1px solid rgb(160, 158, 158);
+  height: 32.1px;
+  width: 80px;
+  margin-left: -4.3px;
+  border-left: 0;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  box-shadow: 1px 2px 13px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+}
+
+.input-area input {
+  width: 300px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 20px 0 0 20px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: 1px solid rgb(160, 158, 158);
+  outline: none;
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  background-color: transparent;
+  color: inherit;
+}
+
+.input-area input:hover,
+.input-area button:hover {
+  background: rgba(245, 245, 245, 0.205);
+}
+
+.result-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.result {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pal-word {
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.pal-ans {
+  white-space: nowrap;
+}
+
+.explain {
+  position: relative;
+  max-width: 500px;
+  height: 50px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 50px;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explain p {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.explain .info {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  width: 500px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.info-img {
+  height: 40px;
+}
+
+.explain:hover .info {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.explain:hover p {
+  opacity: 1;
+}
+
+.preload * {
+  transition: none;
+}
